@@ -1,10 +1,9 @@
-# [Insert your hackathon title or the app's title (keep it short)]
-
+# RERN Bazar
 [Insert description of app]
 
 [Insert app screenshots](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#uploading-assets)
 
-# Overview video (Optional)
+# Overview video
 
 Here's a short video that explains the project and how it uses Redis:
 
