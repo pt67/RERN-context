@@ -4,15 +4,11 @@ const db = require('./db');
 const port = 5000
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
-  console.log(db.fetch('key'))
+  db.fetch('key').then(e=> console.log(e));  
+  
+  res.send(db.fetch('key'));
+
 })
-
-
-
-
-
-
 
 
 

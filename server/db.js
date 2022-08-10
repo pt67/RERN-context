@@ -13,8 +13,8 @@ function create(val){
 
 }
 
-function fetch(val){
- client.get(val).then(e=>console.log(e));
+async function fetch(val){
+ return client.get(val);
 }
 
 
