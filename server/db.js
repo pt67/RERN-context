@@ -17,10 +17,15 @@ function fetch(val){
  return client.get(val);
 }
 
+function remove(val){
+ return client.del(val);
+}
+
 
 module.exports = {
  
 create,
-fetch
+fetch,
+remove
 
 };

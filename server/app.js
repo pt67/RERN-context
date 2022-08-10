@@ -10,6 +10,24 @@ app.get('/', (req, res) => {
 })
 
 
+app.get('/create', (req, res) => {
+  
+  db.create('aeroplane');
+  res.send("created.");
+
+})
+
+
+
+
+app.get('/remove', (req, res) => {
+
+ db.remove('key').then(e=>res.send('deleted.'));
+
+})
+
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
