@@ -13,7 +13,7 @@ function create(val){
 
 }
 
-async function fetch(val){
+function fetch(val){
  return client.get(val);
 }
 
