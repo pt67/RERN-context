@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import Form from './form';
 
 export default function Todo(){
 
@@ -27,6 +27,8 @@ fetchData();
 return (
 <>
 <h1>TO DO</h1>
+<Form/>
+
 <p>{ list ? list : null }</p>
 </>
 );
