@@ -3,7 +3,6 @@
 import './App.css';
 import Todo from './com/todo';
 
-
 function App() {
   return (
     <div className="App">
