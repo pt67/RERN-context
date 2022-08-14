@@ -7,9 +7,13 @@ client.on('error', (err) => console.log('Redis Client Error', err));
 
 client.connect();
 
-
+let data = [];
 function create(val){
- client.set('key', val);
+ data.push(val);
+
+ client.set('key', JSON.stringify(data))
+.then(e=>console.log("success- 200"))
+.catch(err=>console.log(err));
 
 }
 

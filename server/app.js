@@ -29,7 +29,7 @@ app.get('/create', (req, res) => {
 app.post('/build', urlencodedParser, (req, res) => {
  console.log(req.body);
 
- db.create(req.body.name);  
+ db.create(req.body);  
 
  res.json({status: "Success."});
 

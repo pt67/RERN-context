@@ -12,10 +12,11 @@ function formHandle(e){
 e.preventDefault();
 
 var data = qs.stringify({
-  'name': name,
-  'email': email,
-  'phone': phone 
+  name: name,
+  email: email,
+  phone: phone 
 });
+
 var config = {
   method: 'post',
   url: 'http://localhost:5000/build',
@@ -32,9 +33,6 @@ axios(config)
 .catch(function (error) {
   console.log(error);
 });
-
-
-
 
 }
 

@@ -10,7 +10,7 @@ useEffect(()=>{
 
 async function fetchData(){
 const  url = await axios.get('http://localhost:5000');
-//console.log(url.data);
+console.log(url.data);
 setList(url.data);
 
 }
@@ -21,15 +21,24 @@ fetchData();
 }, []);
 
 
-
-
-
 return (
+
 <>
 <h1>TO DO</h1>
 <Form/>
 
-<p>{ list ? list : null }</p>
+<ul>
+{
+
+list.map(item =>
+<li >{ item.name }</li>
+)
+
+}
+
+</ul>
+
+
 </>
 );
 
