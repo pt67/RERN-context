@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
 import qs from 'qs';
+import { v4 } from 'uuid';
+
 
 export default function Form(){
 
@@ -11,7 +13,10 @@ const [phone, setPhone] = useState();
 function formHandle(e){
 e.preventDefault();
 
+//console.log(v4());
+
 var data = qs.stringify({
+  id: v4(),
   name: name,
   email: email,
   phone: phone 
