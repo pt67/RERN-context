@@ -39,9 +39,20 @@
 
 
 
-.btn{
+form{
+display:flex;
+flex-direction:column;
+}
 
-padding: 3px 5px;
-background: #FFEE;
+form input{
+padding:10px;
+margin: 3px 0px; 
+}
+
+form .btn{
+padding: 10px 3px;
+background: #FF0E;
+color: red;
+border: 1px solid #EF0E;
 
 }
