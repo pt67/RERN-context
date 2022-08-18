@@ -4,8 +4,7 @@ import Form from './form';
 
 export default function Todo(){
 
-
-const nameref = useRef();
+const getText = useRef();
 const [list, setList] = useState(null);
 const [detail, setDetail] = useState(null);
 const [dialog, setDialog] = useState(true);
@@ -39,7 +38,7 @@ function getDetail(e){
 
 function editModename(e){
   setEditModeForName(true);
-  
+   
 }
 
 
@@ -70,18 +69,18 @@ list.map(e=>
    <button className="cl-btn" onClick={ ()=>{ setDialog(true)  }}>X</button> 
   <div className="name">
       <div>Name: </div>
-     { (nameedit) ? <input type="text"/> : <div> { (detail) ? detail.name: null }</div> } 
+     { (nameedit) ? <input type="text" placeholder={ (detail ? detail.name: "") }/> : <div> { (detail) ? detail.name: null }</div> } 
      { (!nameedit) ? <span onClick={ editModename }>edit</span>
       : <button>Update</button> } 
    </div>
    <div className="email">
      <div> Email:</div>
-    { (editemail) ? <input type="text"/>:  <div> { (detail) ? detail.email: null }</div>}
+    { (editemail) ? <input type="text" placeholder={(detail)? detail.email: "" }/>:  <div> { (detail) ? detail.email: null }</div>}
     { (!editemail)? <span onClick={ ()=>{ setEditemail(true) } }>edit</span> : <button>Update</button> } 
    </div>
    <div className="phone">
       <div>Phone:</div>
-      { (editphone)? <input type="text"/> : <div> { (detail) ? detail.phone: null }</div>} 
+      { (editphone)? <input type="text" placeholder={(detail)? detail.phone: "" }/> : <div> { (detail) ? detail.phone: null }</div>} 
       { (!editphone)? <span onClick={()=>{setEditphone(true) } }>edit</span>: <button>Update</button> }  
   </div>
 </div>
