@@ -1,9 +1,9 @@
 # RERN Contact
 [Insert description of app]
 
-[Insert app screenshots](./Screenshot_2022-08-22_21-47-27.png)
+### Screenshot
+<img src="Screenshot_2022-08-22_21-47-27.png"/>
 
-[https://i.imgur.com/J64qyl4.png]
 
 # Overview video
 
