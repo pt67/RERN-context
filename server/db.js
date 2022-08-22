@@ -20,10 +20,20 @@ function create(val){
 async function update(vtype, vid, newval){  //name, uid, newname
   var getsrc = await client.get('key');
   var getall = JSON.parse(getsrc);
-  console.log(JSON.parse(getsrc));
+  console.log(vtype);
  
-  var updated = getall.find(e=>e.id ===vid).vtype = newval;
-  client.set("key", JSON.stringify(updated))
+  switch(vtype){
+     case 'name':
+     getall.find(e=>e.id ===vid).name = newval;
+     break;
+     case 'email':
+     getall.find(e=>e.id ===vid).email = newval;
+     break;
+     case 'phone':
+     getall.find(e=>e.id ===vid).phone = newval
+     break; 
+  }
+  client.set("key", JSON.stringify(getall))
   .then(e=>console.log("update success."))
   .catch(err=>console.log(err));
 }

@@ -37,13 +37,8 @@ app.post('/build', urlencodedParser, (req, res) => {
 
 
 app.post('/update', urlencodedParser, (req, res) => {
-   console.log(req.body);
-   let type = req.body.utype;
-   let id = req.body.id;
-   let newname = req.body.newname;
-
-   db.update(type, id, newname);
-
+  // console.log(req.body);
+   db.update(req.body.utype, req.body.id, req.body.newval);
 })
 
 

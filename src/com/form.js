@@ -10,6 +10,7 @@ const [name, setName] = useState();
 const [email, setEmail] = useState();
 const [phone, setPhone] = useState();
 const [display, setDisplay] = useState(true);
+const [created, setCreated] = useState(null);
 
 function formHandle(e){
 e.preventDefault();
@@ -53,7 +54,7 @@ return (
 <input type="text" placeholder="Name" onChange={ (e)=>setName(e.target.value) }/>
 <input type="email" placeholder="Email" onChange={ (e)=>setEmail(e.target.value) }/>
 <input type="phone" placeholder="Phone" onChange={ (e)=>setPhone(e.target.value) }/>
-<input className="btn" type="submit" value="Create"/>
+<input className="btn" onClick={ ()=>{setCreated("Success")}  } type="submit" value={ (created)? created: "Create" }/>
 </form>
 </div>
 </>

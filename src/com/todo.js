@@ -12,6 +12,7 @@ const [dialog, setDialog] = useState(true);
 const [nameedit, setEditModeForName] = useState(false);
 const [editemail, setEditemail] = useState(false);
 const [editphone, setEditphone] = useState(false);
+const [update, setUpdate] = useState(true);
 
 //update 
 const [newval, setNewval] = useState(null);
@@ -41,13 +42,19 @@ function getDetail(e){
    setDetail(result);
 }
 
-function updateData(utype){
+function updateData(type){
   var id = (detail)? detail.id: "";
+//  var utype = type.target.parentElement.className;
+
+//  var setdata = list.find(l=>l.id === id).name = newval;   
+
+//  console.log(list);
+   
 
   var data = qs.stringify({
   id: id,
-  newname: newval,
-  utype: utype.target.parentElement.className   
+  newval: newval,
+  utype: type.target.parentElement.className   
 });
 
 var config = {
@@ -69,7 +76,7 @@ axios(config)
 });
  
 
-
+setUpdate(false);
 
 }
 
@@ -84,7 +91,7 @@ return (
 <Form/>
 
 <ul className="list">
-{/*
+{
 
 list.map(e=>
     <li className="list-item" key={e.id}> 
@@ -93,7 +100,7 @@ list.map(e=>
     </li>
 )
 
-*/}
+}
 
 </ul>
 <div className="wrapper" hidden={dialog}>
@@ -103,17 +110,20 @@ list.map(e=>
       <div>Name: </div>
      { (nameedit) ? <input type="text" onChange={(e)=>{setNewval(e.target.value)} }  placeholder={ (detail ? detail.name: "") }/> : <div> { (detail) ? detail.name: null }</div> } 
      { (!nameedit) ? <span onClick={ ()=>{ setEditModeForName(true) } }>edit</span>
-      : <button onClick={ updateData }>Update</button> } 
+      : <button onClick={ updateData }>
+      {(update)? "Update": "Success"  }</button> } 
    </div>
    <div className="email">
      <div> Email:</div>
     { (editemail) ? <input type="text" onChange={(e)=>{setNewval(e.target.value)} }  placeholder={(detail)? detail.email: "" }/>:  <div> { (detail) ? detail.email: null }</div>}
-    { (!editemail)? <span onClick={ ()=>{ setEditemail(true) } }>edit</span> : <button onClick={ updateData }>Update</button> } 
+    { (!editemail)? <span onClick={ ()=>{ setEditemail(true) } }>edit</span> : <button onClick={ updateData }>
+   {(update)? "Update": "Success"  } </button> } 
    </div>
    <div className="phone">
       <div>Phone:</div>
       { (editphone)? <input type="text" onChange={(e)=>{setNewval(e.target.value)} }  placeholder={(detail)? detail.phone: "" }/> : <div> { (detail) ? detail.phone: null }</div>} 
-      { (!editphone)? <span onClick={()=>{setEditphone(true) } }>edit</span>: <button onClick={ updateData }>Update</button> }  
+      { (!editphone)? <span onClick={()=>{setEditphone(true) } }>edit</span>: 
+      <button onClick={ updateData }> {(update)? "Update": "Success"  } </button> }  
   </div>
 </div>
 </div>
