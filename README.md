@@ -1,5 +1,5 @@
 # RERN Contact
-[Insert description of app]
+This is a kind of contact app which allows us to collect the important contact from people. App features includes Create, Read, Update and Delete. 
 
 ### Screenshot
 <img src="Screenshot_2022-08-22_21-47-27.png"/>
