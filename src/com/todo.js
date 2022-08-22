@@ -74,9 +74,9 @@ axios(config)
 .catch(function (error) {
   console.log(error);
 });
- 
 
 setUpdate(false);
+window.location.reload(); 
 
 }
 
