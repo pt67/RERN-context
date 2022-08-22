@@ -87,7 +87,7 @@ if(!list) return "No result found.";
 return (
 
 <>
-<h1>TO DO</h1>
+<h1>CONTACTS</h1>
 <Form/>
 
 <ul className="list">
