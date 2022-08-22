@@ -3,6 +3,8 @@
 
 [Insert app screenshots](./Screenshot_2022-08-22_21-47-27.png)
 
+(./Screenshot_2022-08-22_21-47-27.png)
+
 # Overview video
 
 Here's a short video that explains the project and how it uses Redis:
