@@ -17,7 +17,16 @@ Here's a short video that explains the project and how it uses Redis:
 
 ### How the data is stored:
 
-Refer to [this example](https://github.com/redis-developer/basic-analytics-dashboard-redis-bitmaps-nodejs#how-the-data-is-stored) for a more detailed example of what you need for this section.
+json data is created on the frontend and post request is made to the node server. Node server is connected with the redis server
+for storing the keys values. Each a one key will be responsible to hold all the json data made by server. Based on the json objects, 
+all the data structure is cached as a key.
+
+name = "Johan Doe"
+email = "example@example.com"
+phone = "3432342342"
+
+
+
 
 ### How the data is accessed:
 
