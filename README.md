@@ -3,7 +3,7 @@
 
 [Insert app screenshots](./Screenshot_2022-08-22_21-47-27.png)
 
-[./Screenshot_2022-08-22_21-47-27.png]
+[https://github.com/pt67/RERN-context/blob/master/Screenshot_2022-08-22_21-47-27.png]
 
 # Overview video
 
