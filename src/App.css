@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #284c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,7 @@ border: 1px solid #fff;
 margin-bottom:5px;
 display:flex;
 justify-content:space-between;
-width: 10rem;
+width: 20rem;
 }
 
 .list-item button{

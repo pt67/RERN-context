@@ -37,10 +37,40 @@ fetchData();
 function getDetail(e){
    e.preventDefault();
    let result = list.find(d=>d.id === e.target.id);
-   console.log(result);
+   console.log(list.indexOf(result));
    setDialog(false);
    setDetail(result);
 }
+
+function delData(e){
+   e.preventDefault();
+   let result = list.find(d=>d.id === e.target.id);
+   let findindex= list.indexOf(result);
+   list.splice(findindex,1);
+   console.log(list);
+  
+  var config = {
+  method: 'post',
+  url: 'http://localhost:5000/remove',
+  headers: { 
+    'Content-Type': 'application/x-www-form-urlencoded'
+  },
+  data : qs.stringify({ id: e.target.id })
+}; 
+
+  axios(config)
+.then(function (response) {
+  
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});
+
+window.location.reload();
+
+}
+
 
 function updateData(type){
   var id = (detail)? detail.id: "";
@@ -97,6 +127,7 @@ list.map(e=>
     <li className="list-item" key={e.id}> 
      <span> {e.name}</span> 
      <button id={e.id} onClick={ getDetail }>DETAIL</button>
+     <button id={e.id} onClick={ delData }>Delete</button>
     </li>
 )
 

@@ -42,8 +42,17 @@ function fetch(val){
  return client.get(val);
 }
 
-function remove(val){
- return client.del(val);
+async function remove(val){
+  var getsrc = await client.get('key');
+  var dall = JSON.parse(getsrc);
+
+  let delone = dall.find(e=>e.id === val);
+  let findindex= dall.indexOf(delone);
+  dall.splice(findindex, 1);
+
+ client.set("key", JSON.stringify(dall))
+ .then(e=>console.log("Deleted."))
+ .catch(err=>console.log(err));
 }
 
 
