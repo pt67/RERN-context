@@ -91,7 +91,7 @@ To make deploys work, you need to create free account on [Redis Cloud](https://r
 
 ### Netlify
 
-[Insert Deploy on Netlify button](https://www.netlify.com/blog/2016/11/29/introducing-the-deploy-to-netlify-button/)
+[Insert Deploy on Netlify button](https://app.netlify.com/start/deploy?repository=https://github.com/pt67/RERN-context)
 
 ### Vercel
 
