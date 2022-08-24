@@ -41,11 +41,12 @@ performance and working with the data types.
 ## How to run it locally?
 
 Download the repository:
+<code>
 https://github.com/pt67/RERN-context.git
 
 1) cd RERN-context
 2) npm install
-
+</code>
 
 Make sure redis server is ready. Or you can run
 
