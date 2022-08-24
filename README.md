@@ -49,20 +49,21 @@ https://github.com/pt67/RERN-context.git
 </code>
 
 Make sure redis server is ready. Or you can run
-
+<code>
 redis-server
-
+</code>
 
 
 After dependency is installed, now you can start node server by
-
+<code>
 npm run server
-
+</code>
 
 After that run client with
 
+<code>
 npm start
-
+</code>
 
 ### Prerequisites
 
