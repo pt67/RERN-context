@@ -34,19 +34,46 @@ Refer to [this example](https://github.com/redis-developer/basic-analytics-dashb
 
 ### Performance Benchmarks
 
-[If you migrated an existing app to use Redis, please put performance benchmarks here to show the performance improvements.]
+Date to the redis server is to quick. As we compare to the other database as in MySQL, SQL, MongoDB, this is quick for 
+performance and working with the data types. 
+
 
 ## How to run it locally?
 
-[Make sure you test this with a fresh clone of your repo, these instructions will be used to judge your app.]
+Download the repository:
+https://github.com/pt67/RERN-context.git
+
+1) cd RERN-context
+2) npm install
+
+
+Make sure redis server is ready. Or you can run
+
+redis-server
+
+
+
+After dependency is installed, now you can start node server by
+
+npm run server
+
+
+After that run client with
+
+npm start
+
 
 ### Prerequisites
 
-[Fill out with any prerequisites (e.g. Node, Docker, etc.). Specify minimum versions]
+1) Node  v14.19.1
+2) Redis 7.0.4
+
+
 
 ### Local installation
 
-[Insert instructions for local installation]
+To install this app, you will need to pass the prerequisties. After this you will have to follow the instruction 
+required to follow locally. After that you will be able to use this app on web page.
 
 ## Deployment
 
